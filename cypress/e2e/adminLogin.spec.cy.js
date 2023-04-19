@@ -19,6 +19,16 @@ describe('admin login page', () => {
 		})
 	})
 
+	context('given blank user credentials', () => {
+		it('shows login error', () => {
+			// login using the loginAdmin command
+			// blank email and blank password
+			cy.get('.v-btn').click()
+			cy.get('.login__error-message').should('be.visible')
+		})
+	  })
+
+
 	context('given INVALID user credentials', () => {
 		it('invalid email shows login error', () => {
 			// login using the loginAdmin command
@@ -30,6 +40,12 @@ describe('admin login page', () => {
 			// login using the loginAdmin command
 			// invalid password
 			cy.loginAdmin(Cypress.env('admin_email'), invalidPassword)
+			cy.get('.login__error-message').should('be.visible')
+		})
+		it('invalid email and invalid password shows login error', () => {
+			// login using the loginAdmin command
+			// invalid email and invalid password
+			cy.loginAdmin(invalidEmail, invalidPassword)
 			cy.get('.login__error-message').should('be.visible')
 		})
 	  })
