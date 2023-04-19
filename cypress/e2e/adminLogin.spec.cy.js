@@ -21,7 +21,6 @@ describe('admin login page', () => {
 
 	context('given blank user credentials', () => {
 		it('shows login error', () => {
-			// login using the loginAdmin command
 			// blank email and blank password
 			cy.get('.v-btn').click()
 			cy.get('.login__error-message').should('be.visible')
