@@ -1,0 +1,19 @@
+{
+  "name": "pet-shop-end-to-end-testing",
+  "version": "1.0.0",
+  "description": "test pet shop app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muthaka/Pet-Shop-End-to-End-Testing.git"
+  },
+  "author": "muthaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muthaka/Pet-Shop-End-to-End-Testing/issues"
+  },
+  "homepage": "https://github.com/muthaka/Pet-Shop-End-to-End-Testing#readme"
+}
