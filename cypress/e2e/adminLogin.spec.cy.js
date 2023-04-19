@@ -1,7 +1,7 @@
 describe('admin login page', () => {
 	let invalidEmail = "admin@gmail.com"
 	let invalidPassword = "invalidpass"
-  // navigate to /login 
+  	// navigate to /login 
 	beforeEach(() => {
 		cy.visit('/login')
 	  })
