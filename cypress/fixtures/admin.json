@@ -1,0 +1,12 @@
+{
+  "first_name": "Admin",
+  "last_name": "Test",
+  "existing_email": "admin@buckhill.co.uk",
+  "email_domain": "@buckhill.com",
+  "password": "test12345",
+  "password_confirmation": "test12345",
+  "avatar": "",
+  "address": "81818",
+  "phone_number": "027114557",
+  "marketing": "true"
+}
