@@ -33,3 +33,38 @@ Cypress.Commands.add('adminAccessTokenAPI', () =>{
       })
 
 })
+
+// Command to return second user email
+Cypress.Commands.add('userEmail', () =>{
+    // bind the token from the comand
+    cy.adminAccessTokenAPI().then(accessToken => {
+        
+        cy.request({
+            method: 'GET',
+            url: Cypress.env('api_admin_list_users'),
+            headers: { 'Authorization': 'Bearer ' + accessToken}
+        })
+        .then((resp) => {
+            expect(resp.status).to.eq(200)
+            const user_email = resp.body.data[1].email
+            return (user_email)
+        })
+
+    })
+})
+
+// --Command to login user to the petshop UI
+Cypress.Commands.add('loginUser', (email, password) => {
+    // clear all cookies
+    cy.clearCookies()
+    // search for elements within form
+    cy.get('.login__form.elevation-2').within(($loginwindow) => {
+        // find email input element and type the admin email
+        cy.get('input[class="v-field__input"]').first().clear().type(email)
+        // find password input element and type the admin password
+        cy.get('input[class="v-field__input"]').last().clear().type(password)
+        // find the submit button and click
+        cy.get('.v-btn').click()
+    })
+    
+})
