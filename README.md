@@ -1,14 +1,20 @@
 # Pet Shop End-to-End (E2E) testing
-Standalone Cypress suite to test the [PetShop API](https://pet-shop.buckhill.com.hr/api/swagger) and PetShop UI{[Admin UI](https://pet-shop.buckhill.com.hr/login) and [User UI](https://pet-shop.buckhill.com.hr/)}
+Standalone Cypress suite to test the [PetShop API](https://pet-shop.buckhill.com.hr/api/swagger) and PetShop UI([Admin UI](https://pet-shop.buckhill.com.hr/login) and [User UI](https://pet-shop.buckhill.com.hr/))
 
-API test covered are:
+### API test covered are:
+
 a. Login admin account
+
 b. Create admin account
+
 c. list all users
 
-UI test covered are:
+### UI test covered are:
+
 a. Login admin 
+
 b. Login user
+
 c. Admin dashboard
 
 
@@ -60,6 +66,7 @@ npm install
 ```
 ### 2. Run the tests
 The project is now on your device and tests can be ran.
+
 On the root directory of the project *Pet-Shop-End-to-End-Testing* using your terminal:
 
 ```bash
@@ -72,5 +79,4 @@ npx cypress run
 
 ```
 
-**Learn more cypress commands to run the tests:**  
-[cypress command-Line](https://docs.cypress.io/guides/guides/command-line) 
+[Learn more about cypress commands](https://docs.cypress.io/guides/guides/command-line)
