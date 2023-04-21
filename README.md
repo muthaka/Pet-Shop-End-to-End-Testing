@@ -27,8 +27,8 @@ Tests runs on:
 
 ## Requirements to run the tests
 1. Node must be installed in your device
-**how to install node.js:**
-* [download node.js](https://nodejs.org/en/download)
+
+* [how to install node.js](https://nodejs.org/en/download)
 
 ## command to check node version 
 ```json
@@ -36,8 +36,8 @@ node -v
 ```
 
 2. npm must be installed
-**how to install npm:**
-* [installing npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+* [how to install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## command to check npm version 
 ```json
@@ -50,6 +50,9 @@ npm -v
 ### 1. Clone this repo
 
 If you want to run the tests you'll need to [clone](https://github.com/muthaka/Pet-Shop-End-to-End-Testing) it first.
+
+[How to clone a repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
 
 After cloning this project in `Github`, run these commands:
 
