@@ -9,7 +9,7 @@ describe('admin login page', () => {
 	context('given login page', () => {
 		it('has form elements', () => {
 			// check heading  
-			cy.contains('.text-h5', 'Log In')
+			cy.contains('.text-h5', 'Log In').should('be.visible')
 			// check email field 
 			cy.get('#input-0').should('not.be.visible')
 			// check password field
@@ -56,7 +56,7 @@ describe('admin login page', () => {
 			// confirm url is redirected to /dashboard 
 			cy.url().should('include', '/dashboard')
 			// confirm the page heading
-			cy.get('.text-h5').contains('Dashboard')
+			cy.get('.text-h5').contains('Dashboard').should('be.visible')
 		})
 	  })
 

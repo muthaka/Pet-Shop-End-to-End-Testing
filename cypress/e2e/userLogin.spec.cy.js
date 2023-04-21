@@ -12,7 +12,7 @@ describe('admin login page', () => {
             // check for elements within form
             cy.get('.login__form.elevation-2').within(($loginwindow) => {
                 // check heading  
-			    cy.contains('.text-h5', 'Log In')
+			    cy.contains('.text-h5', 'Log In').should('be.visible')
                 // check email field
                 cy.get('input[class="v-field__input"]').first().should('not.be.visible')
                 // check password field
@@ -21,8 +21,10 @@ describe('admin login page', () => {
                 cy.get('.v-btn').should('be.visible')
                 // check forgot password link
                 cy.get('.auth-actions > :nth-child(1)').contains('Forgot password?')
+                .should('be.visible')
                 // check signup link
                 cy.get('.auth-actions > :nth-child(2)').contains("Don't have an account? Sign up")
+                .should('be.visible')
 
             })
 		})
@@ -81,8 +83,12 @@ describe('admin login page', () => {
                 cy.loginUser(email, Cypress.env('user_password'))
                 // confirm the logout button
 			    cy.get('.ml-6 > .v-btn__content').contains('LOGOUT')
-                cy.get('.v-img__img').click()
+                .should('be.visible')
+                cy.get('.v-toolbar__content > .v-container > :nth-child(3)').within(($toolbar) =>{
+                    cy.get('.v-img__img').click()
+                })
                 cy.get('.settings__user-details > :nth-child(5) > :nth-child(2)').contains(email)
+                .should('be.visible')
             })
             
 		})
