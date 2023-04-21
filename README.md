@@ -28,7 +28,7 @@ Tests runs on:
 ## Requirements to run the tests
 1. Node must be installed in your device
 
-* [how to install node.js](https://nodejs.org/en/download)
+* [How to install node.js](https://nodejs.org/en/download)
 
 ## command to check node version 
 ```json
@@ -37,7 +37,7 @@ node -v
 
 2. npm must be installed
 
-* [how to install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* [How to install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## command to check npm version 
 ```json
@@ -57,13 +57,13 @@ If you want to run the tests you'll need to [clone](https://github.com/muthaka/P
 After cloning this project in `Github`, run these commands:
 
 ```bash
-## clone this repo to a local directory
+## Clone this repo to a local directory
 git clone https://github.com/muthaka/Pet-Shop-End-to-End-Testing.git
 
 ## cd into the cloned repo
 cd Pet-Shop-End-to-End-Testing
 
-## install the node_modules
+## Install the node_modules
 npm install
 
 ```
@@ -73,7 +73,7 @@ The project is now on your device and tests can be ran.
 On the root directory of the project *Pet-Shop-End-to-End-Testing* using your terminal:
 
 ```bash
-# launch the cypress tests in headless mode using the commands
+# Launch the cypress tests in headless mode using the commands
 command 1
 npm run cy:run 
 
@@ -83,3 +83,19 @@ npx cypress run
 ```
 
 [Learn more about cypress commands](https://docs.cypress.io/guides/guides/command-line)
+
+
+### 3. Boot the cypress tests with Docker
+
+Make sure that Docker is configured/installed in your device
+
+[Docker installation](https://docs.docker.com/get-docker/)
+
+On the root directory of the project *Pet-Shop-End-to-End-Testing* using your terminal:
+
+```bash
+# Boot application with docker
+command 
+docker compose up 
+
+```
