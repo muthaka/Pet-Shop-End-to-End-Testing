@@ -1,4 +1,4 @@
-describe('admin login page', () => {
+describe('user login page', () => {
 	let invalidEmail = "user@gmail.com"
 	let invalidPassword = "invalidpass"
   	// navigate to /login 
@@ -35,6 +35,7 @@ describe('admin login page', () => {
 			// blank email and blank password
             cy.get('.login__form.elevation-2').within(($loginwindow) => {
                 cy.get('.v-btn').click()
+                cy.wait(2000)
                 cy.get('.login__error-message').should('be.visible')
             })
 		})
@@ -84,13 +85,13 @@ describe('admin login page', () => {
                 
                 
                 // confirm the logout button
-			    // cy.get('.ml-6 > .v-btn__content').contains('LOGOUT')
-                // .should('be.visible')
-                // cy.get('.v-toolbar__content > .v-container > :nth-child(3)').within(($toolbar) =>{
-                //     cy.get('.v-img__img').click()
-                // })
-                // cy.get('.settings__user-details > :nth-child(5) > :nth-child(2)').contains(email)
-                // .should('be.visible')
+			    cy.get('.ml-6 > .v-btn__content').contains('LOGOUT')
+                .should('be.visible')
+                cy.get('.v-toolbar__content > .v-container > :nth-child(3)').within(($toolbar) =>{
+                    cy.get('.v-img__img').click()
+                })
+                cy.get('.settings__user-details > :nth-child(5) > :nth-child(2)').contains(email)
+                .should('be.visible')
             })
             
 		})

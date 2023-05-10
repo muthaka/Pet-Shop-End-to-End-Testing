@@ -23,6 +23,7 @@ describe('admin login page', () => {
 		it('shows login error', () => {
 			// blank email and blank password
 			cy.get('.v-btn').click()
+			cy.wait(2000)
 			cy.get('.login__error-message').should('be.visible')
 		})
 	  })
